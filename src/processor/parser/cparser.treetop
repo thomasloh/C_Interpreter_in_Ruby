@@ -1,0 +1,450 @@
+grammar CParser
+ 
+	############################
+	##### ProgramStructure #####
+
+	rule block
+	 global? space? body <Block>
+	end
+
+	rule middle
+	 (statement / space)+ <Middle>
+	end
+
+	rule global
+	 (assignment / subroutine / space)+ <Global>
+	end
+
+	rule body
+	  beginning middle ending <Body>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	######################
+	##### Statements #####
+
+	rule statement
+	 space? (procedureCall / input / assignment / conditional / loop / output) <Statement>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	#######################
+	##### Assignments #####    
+
+	rule beginning
+	 space? 'main()' space? '{' space? <Begin>
+	end
+
+	rule ending
+	 space? '}' space? <End>
+	end
+
+	rule assignment
+	 assignmentA / assignmentB
+	end
+
+	rule assignmentA
+	 space? (intAssignment / stringAssignment / charAssignment / boolAssignment / floatAssignment) space? <AssignmentA>
+	end
+
+	rule intAssignment
+	 intType space identifier space? assignment_op space? intExpression ';' <IntAssignment>
+	end
+
+	rule stringAssignment
+	 stringType space identifier space? assignment_op space? stringExpression ';' <StringAssignment>
+	end
+
+	rule charAssignment
+	 charType space identifier space? assignment_op space? charExpression ';' <CharAssignment>
+	end
+
+	rule boolAssignment
+	 boolType space identifier space? assignment_op space? boolExpression ';' <BoolAssignment>
+	end
+
+	rule floatAssignment
+	 floatType space identifier space? assignment_op space? floatExpression ';' <FloatAssignment>
+	end
+
+	rule assignmentB
+	 identifier space? assignment_op space? expression ';' <AssignmentB>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	########################
+	##### TypeLiterals #####
+
+	rule nil
+	 "nil" <NilLiteral>
+	end
+
+	rule true
+	 "true" <TrueLiteral>
+	end
+
+	rule false
+	 "false" <FalseLiteral>
+	end
+
+	rule string
+	 '"' ( "\\" . / [^\\"])* '"' <StringLiteral>
+	end
+
+	rule floatType
+	 'float' <FloatType>
+	end
+
+	rule intType
+	 'int' <IntType>
+	end
+
+	rule stringType
+	 'string' <StringType>
+	end
+
+	rule charType
+	 'char' <CharType>
+	end
+
+	rule boolType
+	 'bool' <BoolType>
+	end
+
+	rule float
+	 ('+' / '-')? [0-9]+ (('.' [0-9]+) / ('e' [0-9]+)) <FloatLiteral>
+	end
+
+	rule integer
+	 ('+' / '-')? [0-9]+ <IntegerLiteral>
+	end
+
+	rule char
+	 "'" ([a-zA-z0-9] / [^a-zA-z0-9]) "'" <CharLiteral>
+	end
+
+	rule identifier
+	 '$'? [a-zA-Z] [a-zA-Z0-9_]* <Identifier>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	########################
+	##### Conditionals #####    
+
+	rule conditional
+	if else? <Conditional>
+	end
+
+	rule if
+	 'if' space? '(' space? expression space? ')' space? '{' middle '}' space? <If>
+	end
+
+	rule else
+	'else' space? '{' middle '}' space? <Else>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	#######################
+	##### Subroutines #####
+
+	rule assignmentC
+	 space? (intAssignmentSub / stringAssignmentSub / charAssignmentSub / boolAssignmentSub / floatAssignmentSub) space? <AssignmentC>
+	end
+
+	rule intAssignmentSub
+	 intType space identifier <IntAssignmentSub>
+	end
+
+	rule stringAssignmentSub
+	 stringType space identifier <StringAssignmentSub>
+	end
+
+	rule charAssignmentSub
+	 charType space identifier  <CharAssignmentSub>
+	end
+
+	rule boolAssignmentSub
+	 boolType space identifier <BoolAssignmentSub>
+	end
+
+	rule floatAssignmentSub
+	 floatType space identifier  <FloatAssignmentSub>
+	end
+
+	rule subroutine
+	 space? 'void' space identifier space? '(' space? assignmentC space? ')' space? '{' middle '}' space? <Subroutine>
+	end
+
+	# rule secondParamInSub
+	# ',' assignmentC <SecondParamInSub>
+	# end
+
+	rule procedureCall
+	 identifier space? '(' (identifier / integer / string / true / false / char / float) space? ')' space? ';' <ProcedureCall>
+	end
+
+	# rule secondParam
+	# ',' space? (identifier / integer / string / true / false / char / float) <SecondParam>
+	# end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	######################
+	##### Expressions#####    
+
+	rule expression
+	 space? (comparative / additive) <Expression>
+	end
+
+	rule comparative
+	 additive space? comparative_op space? additive <ComparativeExpression>
+	end
+
+	rule additive
+	 multitive space? additive_op space? additive <AdditiveExpression>
+	 /
+	 multitive 
+	end
+
+	rule multitive
+	 term space? multitive_op space? multitive <MultitiveExpression>
+	 /
+	 term 
+	end
+
+	rule term
+	 string / float / char /identifier / integer / '('? space? expression space? ')'? <Expression>
+	end
+
+	##############################
+	##### Boolean Expressions#####    
+
+	rule boolExpression
+	 space? boolTerm space? <BoolExpression>
+	end
+
+	rule boolTerm
+	 true / false / '('? space? expression space? ')'? <BoolExpression>
+	end
+
+	###############################
+	##### Integer Expressions #####    
+
+	rule intExpression
+	 space? (intComparative / intAdditive) <IntExpression>
+	end
+
+	rule intComparative
+	 intAdditive space? comparative_op space? intAdditive <IntComparativeExpression>
+	end
+
+	rule intAdditive
+	 intMultitive space? additive_op space? intAdditive <IntAdditiveExpression>
+	 /
+	 intMultitive 
+	end
+
+	rule intMultitive
+	 intTerm space? multitive_op space? intMultitive <IntMultitiveExpression>
+	 /
+	 intTerm 
+	end
+
+	rule intTerm
+	 identifier / integer / '('? space? intExpression space? ')'? <IntExpression>
+	end
+
+	#################
+	# StringExpression
+
+	rule stringExpression
+	 space? (stringComparative / stringAdditive) <StringExpression>
+	end
+
+	rule stringComparative
+	 stringAdditive space? comparative_op space? stringAdditive <StringComparativeExpression>
+	end
+
+	rule stringAdditive
+	 stringMultitive space? additive_op space? stringAdditive <StringAdditiveExpression>
+	 /
+	 stringMultitive 
+	end
+
+	rule stringMultitive
+	 stringTerm space? multitive_op space? stringMultitive <StringMultitiveExpression>
+	 /
+	 stringTerm 
+	end
+
+	rule stringTerm
+	 identifier / char / string / '('? space? stringExpression space? ')'? <StringExpression>
+	end
+
+	#################
+	# FloatExpression
+
+	rule floatExpression
+	 space? (floatComparative / floatAdditive) <FloatExpression>
+	end
+
+	rule floatComparative
+	 floatAdditive space? comparative_op space? floatAdditive <FloatComparativeExpression>
+	end
+
+	rule floatAdditive
+	 floatMultitive space? additive_op space? floatAdditive <FloatAdditiveExpression>
+	 /
+	 floatMultitive 
+	end
+
+	rule floatMultitive
+	 floatTerm space? multitive_op space? floatMultitive <FloatMultitiveExpression>
+	 /
+	 floatTerm 
+	end
+
+	rule floatTerm
+	 identifier / float / '('? space? floatExpression space? ')'? <FloatExpression>
+	end
+
+	#################
+	# CharExpression
+
+	rule charExpression
+	 space? (charComparative / charAdditive) <CharExpression>
+	end
+
+	rule charComparative
+	 charAdditive space? comparative_op space? charAdditive <CharComparativeExpression>
+	end
+
+	rule charAdditive
+	 charTerm space? additive_op space? charAdditive <CharAdditiveExpression>
+	 /
+	 charMultitive 
+	end
+
+	rule charMultitive
+	 charTerm space? multitive_op space? charMultitive <CharMultitiveExpression>
+	 /
+	 charTerm 
+	end
+
+	rule charTerm
+	 identifier / char / '('? space? charExpression space? ')'? <CharExpression>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	####################
+	##### Loops #####    
+
+	rule loop
+	 'while' space? '(' space? expression space? ')' space? '{' middle '}' space? <Loop>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	####################
+	##### Input #####    
+
+	rule input
+	identifier space? assignment_op space? 'gets' space? '()' space? ';' <Input>
+	end
+
+	####################
+	##### Output #####    
+ 
+	rule combinationOutput
+	  (outputString / outputIdentifier / space)+ <CombinationOutput>
+	end
+
+	rule outputString
+	  space? '+' space? string <StringLiteral>
+	end
+
+	rule outputIdentifier
+	  space? '+' space? identifier <Identifier>
+	end
+
+	rule output
+	 'puts' space? '(' space? (string / identifier) space? combinationOutput? space? ')' space? ';' <Output>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	####################
+	##### Operators #####
+
+	rule comparative_op
+	equal_op / not_equal_op / greater_eq_op / greater_op / less_eq_op / less_op
+	end
+
+	rule additive_op
+	 addition_op / subtraction_op
+	end
+
+	rule multitive_op
+	 multiplication_op / division_op
+	end
+
+	rule assignment_op
+	 '=' <AssignmentOp>
+	end
+
+	rule equal_op
+	 '==' <EqualOp>
+	end
+
+	rule not_equal_op
+	 '!=' <NotEqualOp>
+	end
+
+	rule greater_op
+	 '>' <GreaterOp>
+	end
+
+	rule less_op
+	 '<' <LessOp>
+	end
+
+	rule greater_eq_op
+	 '>=' <GreaterEqOp>
+	end
+
+	rule less_eq_op
+	 '<=' <LessEqOp>
+	end
+
+	rule addition_op
+	 '+' <AdditionOp>
+	end
+
+	rule subtraction_op
+	 '-' <SubtractionOp>
+	end
+
+	rule multiplication_op
+	 '*' <MultiplicationOp>
+	end
+
+	rule division_op
+	 '/' <DivisionOp>
+	end
+
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	######################
+	##### Whitespace #####    
+
+	rule space
+	  [\s\n]+
+	end
+    
+end

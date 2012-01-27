@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CParser::CharAdditiveExpression</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../processor/parser/cparser_extensions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="processor/parser/cparser_extensions.rb">processor/parser/cparser_extensions.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Treetop/Runtime/SyntaxNode.html">CParser::Treetop::Runtime::SyntaxNode</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../CParser.html">CParser</a></li>
+        
+          <li><a href="../CParser/AdditionOp.html">CParser::AdditionOp</a></li>
+        
+          <li><a href="../CParser/AdditiveExpression.html">CParser::AdditiveExpression</a></li>
+        
+          <li><a href="../CParser/AssignmentA.html">CParser::AssignmentA</a></li>
+        
+          <li><a href="../CParser/AssignmentB.html">CParser::AssignmentB</a></li>
+        
+          <li><a href="../CParser/AssignmentC.html">CParser::AssignmentC</a></li>
+        
+          <li><a href="../CParser/AssignmentOp.html">CParser::AssignmentOp</a></li>
+        
+          <li><a href="../CParser/Begin.html">CParser::Begin</a></li>
+        
+          <li><a href="../CParser/Block.html">CParser::Block</a></li>
+        
+          <li><a href="../CParser/Body.html">CParser::Body</a></li>
+        
+          <li><a href="../CParser/BoolAssignment.html">CParser::BoolAssignment</a></li>
+        
+          <li><a href="../CParser/BoolAssignmentSub.html">CParser::BoolAssignmentSub</a></li>
+        
+          <li><a href="../CParser/BoolExpression.html">CParser::BoolExpression</a></li>
+        
+          <li><a href="../CParser/BoolType.html">CParser::BoolType</a></li>
+        
+          <li><a href="../CParser/CharAdditiveExpression.html">CParser::CharAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/CharAssignment.html">CParser::CharAssignment</a></li>
+        
+          <li><a href="../CParser/CharAssignmentSub.html">CParser::CharAssignmentSub</a></li>
+        
+          <li><a href="../CParser/CharComparativeExpression.html">CParser::CharComparativeExpression</a></li>
+        
+          <li><a href="../CParser/CharExpression.html">CParser::CharExpression</a></li>
+        
+          <li><a href="../CParser/CharLiteral.html">CParser::CharLiteral</a></li>
+        
+          <li><a href="../CParser/CharMultitiveExpression.html">CParser::CharMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/CharType.html">CParser::CharType</a></li>
+        
+          <li><a href="../CParser/CombinationOutput.html">CParser::CombinationOutput</a></li>
+        
+          <li><a href="../CParser/ComparativeExpression.html">CParser::ComparativeExpression</a></li>
+        
+          <li><a href="../CParser/Conditional.html">CParser::Conditional</a></li>
+        
+          <li><a href="../CParser/DivisionOp.html">CParser::DivisionOp</a></li>
+        
+          <li><a href="../CParser/Else.html">CParser::Else</a></li>
+        
+          <li><a href="../CParser/End.html">CParser::End</a></li>
+        
+          <li><a href="../CParser/EqualOp.html">CParser::EqualOp</a></li>
+        
+          <li><a href="../CParser/Expression.html">CParser::Expression</a></li>
+        
+          <li><a href="../CParser/FalseLiteral.html">CParser::FalseLiteral</a></li>
+        
+          <li><a href="../CParser/FloatAdditiveExpression.html">CParser::FloatAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/FloatAssignment.html">CParser::FloatAssignment</a></li>
+        
+          <li><a href="../CParser/FloatAssignmentSub.html">CParser::FloatAssignmentSub</a></li>
+        
+          <li><a href="../CParser/FloatComparativeExpression.html">CParser::FloatComparativeExpression</a></li>
+        
+          <li><a href="../CParser/FloatExpression.html">CParser::FloatExpression</a></li>
+        
+          <li><a href="../CParser/FloatLiteral.html">CParser::FloatLiteral</a></li>
+        
+          <li><a href="../CParser/FloatMultitiveExpression.html">CParser::FloatMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/FloatType.html">CParser::FloatType</a></li>
+        
+          <li><a href="../CParser/Global.html">CParser::Global</a></li>
+        
+          <li><a href="../CParser/GreaterEqOp.html">CParser::GreaterEqOp</a></li>
+        
+          <li><a href="../CParser/GreaterOp.html">CParser::GreaterOp</a></li>
+        
+          <li><a href="../CParser/Identifier.html">CParser::Identifier</a></li>
+        
+          <li><a href="../CParser/If.html">CParser::If</a></li>
+        
+          <li><a href="../CParser/Input.html">CParser::Input</a></li>
+        
+          <li><a href="../CParser/IntAdditiveExpression.html">CParser::IntAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/IntAssignment.html">CParser::IntAssignment</a></li>
+        
+          <li><a href="../CParser/IntAssignmentSub.html">CParser::IntAssignmentSub</a></li>
+        
+          <li><a href="../CParser/IntComparativeExpression.html">CParser::IntComparativeExpression</a></li>
+        
+          <li><a href="../CParser/IntExpression.html">CParser::IntExpression</a></li>
+        
+          <li><a href="../CParser/IntMultitiveExpression.html">CParser::IntMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/IntType.html">CParser::IntType</a></li>
+        
+          <li><a href="../CParser/IntegerLiteral.html">CParser::IntegerLiteral</a></li>
+        
+          <li><a href="../CParser/LessEqOp.html">CParser::LessEqOp</a></li>
+        
+          <li><a href="../CParser/LessOp.html">CParser::LessOp</a></li>
+        
+          <li><a href="../CParser/Loop.html">CParser::Loop</a></li>
+        
+          <li><a href="../CParser/Middle.html">CParser::Middle</a></li>
+        
+          <li><a href="../CParser/MoreStmt.html">CParser::MoreStmt</a></li>
+        
+          <li><a href="../CParser/MultiplicationOp.html">CParser::MultiplicationOp</a></li>
+        
+          <li><a href="../CParser/MultitiveExpression.html">CParser::MultitiveExpression</a></li>
+        
+          <li><a href="../CParser/NilLiteral.html">CParser::NilLiteral</a></li>
+        
+          <li><a href="../CParser/NotEqualOp.html">CParser::NotEqualOp</a></li>
+        
+          <li><a href="../CParser/Output.html">CParser::Output</a></li>
+        
+          <li><a href="../CParser/ProcedureCall.html">CParser::ProcedureCall</a></li>
+        
+          <li><a href="../CParser/Statement.html">CParser::Statement</a></li>
+        
+          <li><a href="../CParser/StringAdditiveExpression.html">CParser::StringAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/StringAssignment.html">CParser::StringAssignment</a></li>
+        
+          <li><a href="../CParser/StringAssignmentSub.html">CParser::StringAssignmentSub</a></li>
+        
+          <li><a href="../CParser/StringComparativeExpression.html">CParser::StringComparativeExpression</a></li>
+        
+          <li><a href="../CParser/StringExpression.html">CParser::StringExpression</a></li>
+        
+          <li><a href="../CParser/StringLiteral.html">CParser::StringLiteral</a></li>
+        
+          <li><a href="../CParser/StringMultitiveExpression.html">CParser::StringMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/StringType.html">CParser::StringType</a></li>
+        
+          <li><a href="../CParser/Subroutine.html">CParser::Subroutine</a></li>
+        
+          <li><a href="../CParser/SubtractionOp.html">CParser::SubtractionOp</a></li>
+        
+          <li><a href="../CParser/Term.html">CParser::Term</a></li>
+        
+          <li><a href="../CParser/Treetop.html">CParser::Treetop</a></li>
+        
+          <li><a href="../CParser/Treetop/Runtime.html">CParser::Treetop::Runtime</a></li>
+        
+          <li><a href="../CParser/Treetop/Runtime/SyntaxNode.html">CParser::Treetop::Runtime::SyntaxNode</a></li>
+        
+          <li><a href="../CParser/TrueLiteral.html">CParser::TrueLiteral</a></li>
+        
+          <li><a href="../CCompiler.html">CCompiler</a></li>
+        
+          <li><a href="../CCompiler/AdditionOp.html">CCompiler::AdditionOp</a></li>
+        
+          <li><a href="../CCompiler/AdditiveExpression.html">CCompiler::AdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/AssignmentA.html">CCompiler::AssignmentA</a></li>
+        
+          <li><a href="../CCompiler/AssignmentB.html">CCompiler::AssignmentB</a></li>
+        
+          <li><a href="../CCompiler/AssignmentC.html">CCompiler::AssignmentC</a></li>
+        
+          <li><a href="../CCompiler/AssignmentOp.html">CCompiler::AssignmentOp</a></li>
+        
+          <li><a href="../CCompiler/Begin.html">CCompiler::Begin</a></li>
+        
+          <li><a href="../CCompiler/Block.html">CCompiler::Block</a></li>
+        
+          <li><a href="../CCompiler/Body.html">CCompiler::Body</a></li>
+        
+          <li><a href="../CCompiler/BoolAssignment.html">CCompiler::BoolAssignment</a></li>
+        
+          <li><a href="../CCompiler/BoolAssignmentSub.html">CCompiler::BoolAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/BoolExpression.html">CCompiler::BoolExpression</a></li>
+        
+          <li><a href="../CCompiler/BoolType.html">CCompiler::BoolType</a></li>
+        
+          <li><a href="../CCompiler/CharAdditiveExpression.html">CCompiler::CharAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/CharAssignment.html">CCompiler::CharAssignment</a></li>
+        
+          <li><a href="../CCompiler/CharAssignmentSub.html">CCompiler::CharAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/CharComparativeExpression.html">CCompiler::CharComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/CharExpression.html">CCompiler::CharExpression</a></li>
+        
+          <li><a href="../CCompiler/CharLiteral.html">CCompiler::CharLiteral</a></li>
+        
+          <li><a href="../CCompiler/CharMultitiveExpression.html">CCompiler::CharMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/CharType.html">CCompiler::CharType</a></li>
+        
+          <li><a href="../CCompiler/CombinationOutput.html">CCompiler::CombinationOutput</a></li>
+        
+          <li><a href="../CCompiler/ComparativeExpression.html">CCompiler::ComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/Compiler.html">CCompiler::Compiler</a></li>
+        
+          <li><a href="../CCompiler/Conditional.html">CCompiler::Conditional</a></li>
+        
+          <li><a href="../CCompiler/DivisionOp.html">CCompiler::DivisionOp</a></li>
+        
+          <li><a href="../CCompiler/Else.html">CCompiler::Else</a></li>
+        
+          <li><a href="../CCompiler/End.html">CCompiler::End</a></li>
+        
+          <li><a href="../CCompiler/EqualOp.html">CCompiler::EqualOp</a></li>
+        
+          <li><a href="../CCompiler/Expression.html">CCompiler::Expression</a></li>
+        
+          <li><a href="../CCompiler/FalseLiteral.html">CCompiler::FalseLiteral</a></li>
+        
+          <li><a href="../CCompiler/FloatAdditiveExpression.html">CCompiler::FloatAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatAssignment.html">CCompiler::FloatAssignment</a></li>
+        
+          <li><a href="../CCompiler/FloatAssignmentSub.html">CCompiler::FloatAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/FloatComparativeExpression.html">CCompiler::FloatComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatExpression.html">CCompiler::FloatExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatLiteral.html">CCompiler::FloatLiteral</a></li>
+        
+          <li><a href="../CCompiler/FloatMultitiveExpression.html">CCompiler::FloatMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatType.html">CCompiler::FloatType</a></li>
+        
+          <li><a href="../CCompiler/Global.html">CCompiler::Global</a></li>
+        
+          <li><a href="../CCompiler/GreaterEqOp.html">CCompiler::GreaterEqOp</a></li>
+        
+          <li><a href="../CCompiler/GreaterOp.html">CCompiler::GreaterOp</a></li>
+        
+          <li><a href="../CCompiler/Identifier.html">CCompiler::Identifier</a></li>
+        
+          <li><a href="../CCompiler/If.html">CCompiler::If</a></li>
+        
+          <li><a href="../CCompiler/Input.html">CCompiler::Input</a></li>
+        
+          <li><a href="../CCompiler/IntAdditiveExpression.html">CCompiler::IntAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/IntAssignment.html">CCompiler::IntAssignment</a></li>
+        
+          <li><a href="../CCompiler/IntAssignmentSub.html">CCompiler::IntAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/IntComparativeExpression.html">CCompiler::IntComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/IntExpression.html">CCompiler::IntExpression</a></li>
+        
+          <li><a href="../CCompiler/IntMultitiveExpression.html">CCompiler::IntMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/IntType.html">CCompiler::IntType</a></li>
+        
+          <li><a href="../CCompiler/IntegerLiteral.html">CCompiler::IntegerLiteral</a></li>
+        
+          <li><a href="../CCompiler/LessEqOp.html">CCompiler::LessEqOp</a></li>
+        
+          <li><a href="../CCompiler/LessOp.html">CCompiler::LessOp</a></li>
+        
+          <li><a href="../CCompiler/Loop.html">CCompiler::Loop</a></li>
+        
+          <li><a href="../CCompiler/Middle.html">CCompiler::Middle</a></li>
+        
+          <li><a href="../CCompiler/MultiplicationOp.html">CCompiler::MultiplicationOp</a></li>
+        
+          <li><a href="../CCompiler/MultitiveExpression.html">CCompiler::MultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/NilLiteral.html">CCompiler::NilLiteral</a></li>
+        
+          <li><a href="../CCompiler/NotEqualOp.html">CCompiler::NotEqualOp</a></li>
+        
+          <li><a href="../CCompiler/Output.html">CCompiler::Output</a></li>
+        
+          <li><a href="../CCompiler/ProcedureCall.html">CCompiler::ProcedureCall</a></li>
+        
+          <li><a href="../CCompiler/Statement.html">CCompiler::Statement</a></li>
+        
+          <li><a href="../CCompiler/StringAdditiveExpression.html">CCompiler::StringAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/StringAssignment.html">CCompiler::StringAssignment</a></li>
+        
+          <li><a href="../CCompiler/StringAssignmentSub.html">CCompiler::StringAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/StringComparativeExpression.html">CCompiler::StringComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/StringExpression.html">CCompiler::StringExpression</a></li>
+        
+          <li><a href="../CCompiler/StringLiteral.html">CCompiler::StringLiteral</a></li>
+        
+          <li><a href="../CCompiler/StringMultitiveExpression.html">CCompiler::StringMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/StringType.html">CCompiler::StringType</a></li>
+        
+          <li><a href="../CCompiler/Subroutine.html">CCompiler::Subroutine</a></li>
+        
+          <li><a href="../CCompiler/SubtractionOp.html">CCompiler::SubtractionOp</a></li>
+        
+          <li><a href="../CCompiler/SyntaxNode.html">CCompiler::SyntaxNode</a></li>
+        
+          <li><a href="../CCompiler/TrueLiteral.html">CCompiler::TrueLiteral</a></li>
+        
+          <li><a href="../CVM.html">CVM</a></li>
+        
+          <li><a href="../CVM/VM.html">CVM::VM</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../OperandError.html">OperandError</a></li>
+        
+          <li><a href="../Parser.html">Parser</a></li>
+        
+          <li><a href="../ReturnStackError.html">ReturnStackError</a></li>
+        
+          <li><a href="../StackError.html">StackError</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CParser::CharAdditiveExpression</h1>
+
+    <div id="description" class="description">
+      
+<p>Character additive expression syntax node class</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

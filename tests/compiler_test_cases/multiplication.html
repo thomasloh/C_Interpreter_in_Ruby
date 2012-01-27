@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>Test #8 Not Equal Comparative </title>
+		<LINK href="stylesheet.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	<body>
+		<p><h1>
+			Test #8 Not Equal Comparative<br />
+			Description:  Determine the bytecode after compilation of not equal comparative <br />
+			Input: <br /> <br />
+			</h1>
+			
+<pre style='color:#000000;background:#ffffff;'>main<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+    int a <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>;
+
+    a <span style='color:#808030; '>=</span> <span style='color:#008c00; '>2</span> <span style='color:#808030; '>*</span> <span style='color:#008c00; '>3</span>;
+
+    <span style='color:#400000; '>puts</span> <span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Value of a: "</span> <span style='color:#808030; '>+</span> a<span style='color:#808030; '>)</span>;
+<span style='color:#800080; '>}</span>
+</pre>
+
+<h1>Expected/Actual Output </h1>
+
+<div class="ruby"><ol><li class="li1"><div class="de1"><span class="br0">&#91;</span><span class="nu0">2</span>, <span class="nu0">0</span>, <span class="nu0">140</span>, <span class="re3">:a</span>, <span class="nu0">2</span>, <span class="nu0">2</span>, <span class="nu0">2</span>, <span class="nu0">3</span>, <span class="nu0">62</span>, <span class="nu0">140</span>, <span class="re3">:a</span>, <span class="nu0">4</span>, <span class="st0">&quot;Value of a: &quot;</span>, <span class="nu0">141</span>, <span class="re3">:a</span>, <span class="nu0">82</span>, <span class="nu0">60</span>, <span class="nu0">120</span><span class="br0">&#93;</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+</ol></div>
+
+
+</body>
+</html>

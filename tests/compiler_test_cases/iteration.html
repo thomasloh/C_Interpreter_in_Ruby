@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>Test #3 Iteration </title>
+	</head>
+	<body>
+		<p><h1>
+			Test #3 Iteration<br />
+			Description:  Determine the bytecode after compilation of while loops <br />
+			Input: <br /> <br />
+			</h1>
+
+			<pre style='color:#000000;background:#ffffff;'>main<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	int i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>10</span>;
+
+    	<span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>i > <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"i: "</span> <span style='color:#808030; '>+</span> i<span style='color:#808030; '>)</span>;
+		i <span style='color:#808030; '>=</span> i <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span>;
+		<span style='color:#800080; '>}</span>
+	}
+}
+			</pre>
+
+<h1>Expected/Actual output:</h1>
+
+<div class="ruby"><ol><li class="li1"><div class="de1"><span class="br0">&#91;</span><span class="nu0">2</span>, <span class="nu0">10</span>, <span class="nu0">140</span>, <span class="re3">:i</span>, <span class="nu0">141</span>, <span class="re3">:i</span>, <span class="nu0">2</span>, <span class="nu0">0</span>, <span class="nu0">102</span>, <span class="nu0">22</span>, <span class="nu0">18</span>, <span class="nu0">4</span>, <span class="st0">&quot;i: &quot;</span>, <span class="nu0">141</span>, <span class="re3">:i</span>, <span class="nu0">82</span>, <span class="nu0">60</span>, <span class="nu0">120</span>, <span class="nu0">141</span>, <span class="re3">:i</span>, <span class="nu0">2</span>, <span class="nu0">1</span>, <span class="nu0">61</span>, <span class="nu0">140</span>, <span class="re3">:i</span>, <span class="nu0">20</span>, <span class="sy0">-</span><span class="nu0">21</span><span class="br0">&#93;</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+</ol></div>
+
+</body>
+</html>

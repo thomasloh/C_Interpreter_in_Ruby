@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>Test #4 Subroutine with one parameter</title>
+<LINK href="stylesheet.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<p><h1>
+			Test #4 Subroutine with one parameter<br />
+ 			Description:  Determine the output of subroutine with one parameter<br /><br />
+			Input: <br />
+			</h1>
+
+			<pre style='color:#000000;background:#ffffff;'>void SayHelloNTimes<span style='color:#808030; '>(</span>int n<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#800000; font-weight:bold; '>while</span><span style='color:#808030; '>(</span>n > <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+	<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Hello World: "</span> <span style='color:#808030; '>+</span> n<span style='color:#808030; '>)</span>;
+	n <span style='color:#808030; '>=</span> n <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span>;
+	<span style='color:#800080; '>}</span>
+}
+
+main<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>{</span>
+
+	int d <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>;
+
+	<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>""</span><span style='color:#808030; '>)</span>;
+	<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Demo of subroutine 'SayHelloNTimes' "</span><span style='color:#808030; '>)</span>;
+	<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"------------------------------------"</span><span style='color:#808030; '>)</span>;
+	<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>""</span><span style='color:#808030; '>)</span>;
+
+	<span style='color:#400000; '>puts</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Say hello how many times?"</span><span style='color:#808030; '>)</span>;
+	d <span style='color:#808030; '>=</span> <span style='color:#400000; '>gets</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>;
+
+	SayHelloNTimes<span style='color:#808030; '>(</span>d<span style='color:#808030; '>)</span>;
+
+<span style='color:#800080; '>}</span>
+			</pre>
+
+<h1>Expected/Actual output:</h1>
+
+<div class="ruby"><ol><li class="li1"><div class="de1">Demo of subroutine <span class="st0">'SayHelloNTimes'</span> </div></li>
+<li class="li1"><div class="de1"><span class="sy0">------------------------------------</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+<li class="li1"><div class="de1">Say hello how many times?</div></li>
+<li class="li2"><div class="de2">Hello World: <span class="nu0">10</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">9</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">8</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">7</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">6</span></div></li>
+<li class="li2"><div class="de2">Hello World: <span class="nu0">5</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">4</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">3</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">2</span></div></li>
+<li class="li1"><div class="de1">Hello World: <span class="nu0">1</span></div></li>
+<li class="li2"><div class="de2">&nbsp;</div></li>
+</ol></div>
+
+</body>
+</html>

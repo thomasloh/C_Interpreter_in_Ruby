@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CVM::VM</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../vm/accessors_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/accessors.rb">vm/accessors.rb</a></li>
+          
+            <li><a href="../vm/core_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/core.rb">vm/core.rb</a></li>
+          
+            <li><a href="../vm/helpers_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/helpers.rb">vm/helpers.rb</a></li>
+          
+            <li><a href="../vm/opcodes/comparative_operations/equal_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/comparative_operations/equal.rb">vm/opcodes/comparative_operations/equal.rb</a></li>
+          
+            <li><a href="../vm/opcodes/comparative_operations/greater_than_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/comparative_operations/greater_than.rb">vm/opcodes/comparative_operations/greater_than.rb</a></li>
+          
+            <li><a href="../vm/opcodes/comparative_operations/greaterEq_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/comparative_operations/greaterEq.rb">vm/opcodes/comparative_operations/greaterEq.rb</a></li>
+          
+            <li><a href="../vm/opcodes/comparative_operations/invert_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/comparative_operations/invert.rb">vm/opcodes/comparative_operations/invert.rb</a></li>
+          
+            <li><a href="../vm/opcodes/comparative_operations/less_than_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/comparative_operations/less_than.rb">vm/opcodes/comparative_operations/less_than.rb</a></li>
+          
+            <li><a href="../vm/opcodes/comparative_operations/lessEq_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/comparative_operations/lessEq.rb">vm/opcodes/comparative_operations/lessEq.rb</a></li>
+          
+            <li><a href="../vm/opcodes/control_operations/exit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/control_operations/exit.rb">vm/opcodes/control_operations/exit.rb</a></li>
+          
+            <li><a href="../vm/opcodes/control_operations/no_op_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/control_operations/no_op.rb">vm/opcodes/control_operations/no_op.rb</a></li>
+          
+            <li><a href="../vm/opcodes/flow_control_operations/jump_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/flow_control_operations/jump.rb">vm/opcodes/flow_control_operations/jump.rb</a></li>
+          
+            <li><a href="../vm/opcodes/flow_control_operations/jump_if_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/flow_control_operations/jump_if.rb">vm/opcodes/flow_control_operations/jump_if.rb</a></li>
+          
+            <li><a href="../vm/opcodes/flow_control_operations/jump_unless_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/flow_control_operations/jump_unless.rb">vm/opcodes/flow_control_operations/jump_unless.rb</a></li>
+          
+            <li><a href="../vm/opcodes/function_operations/call_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/function_operations/call.rb">vm/opcodes/function_operations/call.rb</a></li>
+          
+            <li><a href="../vm/opcodes/function_operations/push_function_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/function_operations/push_function.rb">vm/opcodes/function_operations/push_function.rb</a></li>
+          
+            <li><a href="../vm/opcodes/function_operations/return_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/function_operations/return.rb">vm/opcodes/function_operations/return.rb</a></li>
+          
+            <li><a href="../vm/opcodes/function_operations/tailcall_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/function_operations/tailcall.rb">vm/opcodes/function_operations/tailcall.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/get_key_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/get_key.rb">vm/opcodes/hash_operations/get_key.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/has_key_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/has_key.rb">vm/opcodes/hash_operations/has_key.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/length_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/length.rb">vm/opcodes/hash_operations/length.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/num_pairs_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/num_pairs.rb">vm/opcodes/hash_operations/num_pairs.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/pairs_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/pairs.rb">vm/opcodes/hash_operations/pairs.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/push_hash_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/push_hash.rb">vm/opcodes/hash_operations/push_hash.rb</a></li>
+          
+            <li><a href="../vm/opcodes/hash_operations/set_key_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/hash_operations/set_key.rb">vm/opcodes/hash_operations/set_key.rb</a></li>
+          
+            <li><a href="../vm/opcodes/io_operations/gets_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/io_operations/gets.rb">vm/opcodes/io_operations/gets.rb</a></li>
+          
+            <li><a href="../vm/opcodes/io_operations/print_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/io_operations/print.rb">vm/opcodes/io_operations/print.rb</a></li>
+          
+            <li><a href="../vm/opcodes/math_operations/add_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/math_operations/add.rb">vm/opcodes/math_operations/add.rb</a></li>
+          
+            <li><a href="../vm/opcodes/math_operations/divide_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/math_operations/divide.rb">vm/opcodes/math_operations/divide.rb</a></li>
+          
+            <li><a href="../vm/opcodes/math_operations/multiply_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/math_operations/multiply.rb">vm/opcodes/math_operations/multiply.rb</a></li>
+          
+            <li><a href="../vm/opcodes/math_operations/subtract_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/math_operations/subtract.rb">vm/opcodes/math_operations/subtract.rb</a></li>
+          
+            <li><a href="../vm/opcodes/push_operations/push_bool_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/push_operations/push_bool.rb">vm/opcodes/push_operations/push_bool.rb</a></li>
+          
+            <li><a href="../vm/opcodes/push_operations/push_char_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/push_operations/push_char.rb">vm/opcodes/push_operations/push_char.rb</a></li>
+          
+            <li><a href="../vm/opcodes/push_operations/push_float_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/push_operations/push_float.rb">vm/opcodes/push_operations/push_float.rb</a></li>
+          
+            <li><a href="../vm/opcodes/push_operations/push_int_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/push_operations/push_int.rb">vm/opcodes/push_operations/push_int.rb</a></li>
+          
+            <li><a href="../vm/opcodes/push_operations/push_nil_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/push_operations/push_nil.rb">vm/opcodes/push_operations/push_nil.rb</a></li>
+          
+            <li><a href="../vm/opcodes/push_operations/push_string_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/push_operations/push_string.rb">vm/opcodes/push_operations/push_string.rb</a></li>
+          
+            <li><a href="../vm/opcodes/stack_operations/dup_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/stack_operations/dup.rb">vm/opcodes/stack_operations/dup.rb</a></li>
+          
+            <li><a href="../vm/opcodes/stack_operations/pop_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/stack_operations/pop.rb">vm/opcodes/stack_operations/pop.rb</a></li>
+          
+            <li><a href="../vm/opcodes/stack_operations/stksize_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/stack_operations/stksize.rb">vm/opcodes/stack_operations/stksize.rb</a></li>
+          
+            <li><a href="../vm/opcodes/stack_operations/swap_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/stack_operations/swap.rb">vm/opcodes/stack_operations/swap.rb</a></li>
+          
+            <li><a href="../vm/opcodes/stack_operations/top_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/stack_operations/top.rb">vm/opcodes/stack_operations/top.rb</a></li>
+          
+            <li><a href="../vm/opcodes/stack_operations/typeof_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/stack_operations/typeof.rb">vm/opcodes/stack_operations/typeof.rb</a></li>
+          
+            <li><a href="../vm/opcodes/string_operations/concat_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/string_operations/concat.rb">vm/opcodes/string_operations/concat.rb</a></li>
+          
+            <li><a href="../vm/opcodes/string_operations/strlen_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/string_operations/strlen.rb">vm/opcodes/string_operations/strlen.rb</a></li>
+          
+            <li><a href="../vm/opcodes/string_operations/to_string_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/string_operations/to_string.rb">vm/opcodes/string_operations/to_string.rb</a></li>
+          
+            <li><a href="../vm/opcodes/variable_operations/get_global_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/variable_operations/get_global.rb">vm/opcodes/variable_operations/get_global.rb</a></li>
+          
+            <li><a href="../vm/opcodes/variable_operations/get_local_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/variable_operations/get_local.rb">vm/opcodes/variable_operations/get_local.rb</a></li>
+          
+            <li><a href="../vm/opcodes/variable_operations/set_global_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/variable_operations/set_global.rb">vm/opcodes/variable_operations/set_global.rb</a></li>
+          
+            <li><a href="../vm/opcodes/variable_operations/set_local_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vm/opcodes/variable_operations/set_local.rb">vm/opcodes/variable_operations/set_local.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-data_stack">#data_stack</a></li>
+          
+          <li><a href="#method-i-data_stack-3D">#data_stack=</a></li>
+          
+          <li><a href="#method-i-decrement_scope">#decrement_scope</a></li>
+          
+          <li><a href="#method-i-globals">#globals</a></li>
+          
+          <li><a href="#method-i-increment_scope">#increment_scope</a></li>
+          
+          <li><a href="#method-i-instruction_pointer">#instruction_pointer</a></li>
+          
+          <li><a href="#method-i-instruction_pointer-3D">#instruction_pointer=</a></li>
+          
+          <li><a href="#method-i-level">#level</a></li>
+          
+          <li><a href="#method-i-level-3D">#level=</a></li>
+          
+          <li><a href="#method-i-locals">#locals</a></li>
+          
+          <li><a href="#method-i-opcodes">#opcodes</a></li>
+          
+          <li><a href="#method-i-reload_scope">#reload_scope</a></li>
+          
+          <li><a href="#method-i-return_stack">#return_stack</a></li>
+          
+          <li><a href="#method-i-return_stack-3D">#return_stack=</a></li>
+          
+          <li><a href="#method-i-run">#run</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../CParser.html">CParser</a></li>
+        
+          <li><a href="../CParser/AdditionOp.html">CParser::AdditionOp</a></li>
+        
+          <li><a href="../CParser/AdditiveExpression.html">CParser::AdditiveExpression</a></li>
+        
+          <li><a href="../CParser/AssignmentA.html">CParser::AssignmentA</a></li>
+        
+          <li><a href="../CParser/AssignmentB.html">CParser::AssignmentB</a></li>
+        
+          <li><a href="../CParser/AssignmentC.html">CParser::AssignmentC</a></li>
+        
+          <li><a href="../CParser/AssignmentOp.html">CParser::AssignmentOp</a></li>
+        
+          <li><a href="../CParser/Begin.html">CParser::Begin</a></li>
+        
+          <li><a href="../CParser/Block.html">CParser::Block</a></li>
+        
+          <li><a href="../CParser/Body.html">CParser::Body</a></li>
+        
+          <li><a href="../CParser/BoolAssignment.html">CParser::BoolAssignment</a></li>
+        
+          <li><a href="../CParser/BoolAssignmentSub.html">CParser::BoolAssignmentSub</a></li>
+        
+          <li><a href="../CParser/BoolExpression.html">CParser::BoolExpression</a></li>
+        
+          <li><a href="../CParser/BoolType.html">CParser::BoolType</a></li>
+        
+          <li><a href="../CParser/CharAdditiveExpression.html">CParser::CharAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/CharAssignment.html">CParser::CharAssignment</a></li>
+        
+          <li><a href="../CParser/CharAssignmentSub.html">CParser::CharAssignmentSub</a></li>
+        
+          <li><a href="../CParser/CharComparativeExpression.html">CParser::CharComparativeExpression</a></li>
+        
+          <li><a href="../CParser/CharExpression.html">CParser::CharExpression</a></li>
+        
+          <li><a href="../CParser/CharLiteral.html">CParser::CharLiteral</a></li>
+        
+          <li><a href="../CParser/CharMultitiveExpression.html">CParser::CharMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/CharType.html">CParser::CharType</a></li>
+        
+          <li><a href="../CParser/CombinationOutput.html">CParser::CombinationOutput</a></li>
+        
+          <li><a href="../CParser/ComparativeExpression.html">CParser::ComparativeExpression</a></li>
+        
+          <li><a href="../CParser/Conditional.html">CParser::Conditional</a></li>
+        
+          <li><a href="../CParser/DivisionOp.html">CParser::DivisionOp</a></li>
+        
+          <li><a href="../CParser/Else.html">CParser::Else</a></li>
+        
+          <li><a href="../CParser/End.html">CParser::End</a></li>
+        
+          <li><a href="../CParser/EqualOp.html">CParser::EqualOp</a></li>
+        
+          <li><a href="../CParser/Expression.html">CParser::Expression</a></li>
+        
+          <li><a href="../CParser/FalseLiteral.html">CParser::FalseLiteral</a></li>
+        
+          <li><a href="../CParser/FloatAdditiveExpression.html">CParser::FloatAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/FloatAssignment.html">CParser::FloatAssignment</a></li>
+        
+          <li><a href="../CParser/FloatAssignmentSub.html">CParser::FloatAssignmentSub</a></li>
+        
+          <li><a href="../CParser/FloatComparativeExpression.html">CParser::FloatComparativeExpression</a></li>
+        
+          <li><a href="../CParser/FloatExpression.html">CParser::FloatExpression</a></li>
+        
+          <li><a href="../CParser/FloatLiteral.html">CParser::FloatLiteral</a></li>
+        
+          <li><a href="../CParser/FloatMultitiveExpression.html">CParser::FloatMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/FloatType.html">CParser::FloatType</a></li>
+        
+          <li><a href="../CParser/Global.html">CParser::Global</a></li>
+        
+          <li><a href="../CParser/GreaterEqOp.html">CParser::GreaterEqOp</a></li>
+        
+          <li><a href="../CParser/GreaterOp.html">CParser::GreaterOp</a></li>
+        
+          <li><a href="../CParser/Identifier.html">CParser::Identifier</a></li>
+        
+          <li><a href="../CParser/If.html">CParser::If</a></li>
+        
+          <li><a href="../CParser/Input.html">CParser::Input</a></li>
+        
+          <li><a href="../CParser/IntAdditiveExpression.html">CParser::IntAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/IntAssignment.html">CParser::IntAssignment</a></li>
+        
+          <li><a href="../CParser/IntAssignmentSub.html">CParser::IntAssignmentSub</a></li>
+        
+          <li><a href="../CParser/IntComparativeExpression.html">CParser::IntComparativeExpression</a></li>
+        
+          <li><a href="../CParser/IntExpression.html">CParser::IntExpression</a></li>
+        
+          <li><a href="../CParser/IntMultitiveExpression.html">CParser::IntMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/IntType.html">CParser::IntType</a></li>
+        
+          <li><a href="../CParser/IntegerLiteral.html">CParser::IntegerLiteral</a></li>
+        
+          <li><a href="../CParser/LessEqOp.html">CParser::LessEqOp</a></li>
+        
+          <li><a href="../CParser/LessOp.html">CParser::LessOp</a></li>
+        
+          <li><a href="../CParser/Loop.html">CParser::Loop</a></li>
+        
+          <li><a href="../CParser/Middle.html">CParser::Middle</a></li>
+        
+          <li><a href="../CParser/MoreStmt.html">CParser::MoreStmt</a></li>
+        
+          <li><a href="../CParser/MultiplicationOp.html">CParser::MultiplicationOp</a></li>
+        
+          <li><a href="../CParser/MultitiveExpression.html">CParser::MultitiveExpression</a></li>
+        
+          <li><a href="../CParser/NilLiteral.html">CParser::NilLiteral</a></li>
+        
+          <li><a href="../CParser/NotEqualOp.html">CParser::NotEqualOp</a></li>
+        
+          <li><a href="../CParser/Output.html">CParser::Output</a></li>
+        
+          <li><a href="../CParser/ProcedureCall.html">CParser::ProcedureCall</a></li>
+        
+          <li><a href="../CParser/Statement.html">CParser::Statement</a></li>
+        
+          <li><a href="../CParser/StringAdditiveExpression.html">CParser::StringAdditiveExpression</a></li>
+        
+          <li><a href="../CParser/StringAssignment.html">CParser::StringAssignment</a></li>
+        
+          <li><a href="../CParser/StringAssignmentSub.html">CParser::StringAssignmentSub</a></li>
+        
+          <li><a href="../CParser/StringComparativeExpression.html">CParser::StringComparativeExpression</a></li>
+        
+          <li><a href="../CParser/StringExpression.html">CParser::StringExpression</a></li>
+        
+          <li><a href="../CParser/StringLiteral.html">CParser::StringLiteral</a></li>
+        
+          <li><a href="../CParser/StringMultitiveExpression.html">CParser::StringMultitiveExpression</a></li>
+        
+          <li><a href="../CParser/StringType.html">CParser::StringType</a></li>
+        
+          <li><a href="../CParser/Subroutine.html">CParser::Subroutine</a></li>
+        
+          <li><a href="../CParser/SubtractionOp.html">CParser::SubtractionOp</a></li>
+        
+          <li><a href="../CParser/Term.html">CParser::Term</a></li>
+        
+          <li><a href="../CParser/Treetop.html">CParser::Treetop</a></li>
+        
+          <li><a href="../CParser/Treetop/Runtime.html">CParser::Treetop::Runtime</a></li>
+        
+          <li><a href="../CParser/Treetop/Runtime/SyntaxNode.html">CParser::Treetop::Runtime::SyntaxNode</a></li>
+        
+          <li><a href="../CParser/TrueLiteral.html">CParser::TrueLiteral</a></li>
+        
+          <li><a href="../CCompiler.html">CCompiler</a></li>
+        
+          <li><a href="../CCompiler/AdditionOp.html">CCompiler::AdditionOp</a></li>
+        
+          <li><a href="../CCompiler/AdditiveExpression.html">CCompiler::AdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/AssignmentA.html">CCompiler::AssignmentA</a></li>
+        
+          <li><a href="../CCompiler/AssignmentB.html">CCompiler::AssignmentB</a></li>
+        
+          <li><a href="../CCompiler/AssignmentC.html">CCompiler::AssignmentC</a></li>
+        
+          <li><a href="../CCompiler/AssignmentOp.html">CCompiler::AssignmentOp</a></li>
+        
+          <li><a href="../CCompiler/Begin.html">CCompiler::Begin</a></li>
+        
+          <li><a href="../CCompiler/Block.html">CCompiler::Block</a></li>
+        
+          <li><a href="../CCompiler/Body.html">CCompiler::Body</a></li>
+        
+          <li><a href="../CCompiler/BoolAssignment.html">CCompiler::BoolAssignment</a></li>
+        
+          <li><a href="../CCompiler/BoolAssignmentSub.html">CCompiler::BoolAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/BoolExpression.html">CCompiler::BoolExpression</a></li>
+        
+          <li><a href="../CCompiler/BoolType.html">CCompiler::BoolType</a></li>
+        
+          <li><a href="../CCompiler/CharAdditiveExpression.html">CCompiler::CharAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/CharAssignment.html">CCompiler::CharAssignment</a></li>
+        
+          <li><a href="../CCompiler/CharAssignmentSub.html">CCompiler::CharAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/CharComparativeExpression.html">CCompiler::CharComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/CharExpression.html">CCompiler::CharExpression</a></li>
+        
+          <li><a href="../CCompiler/CharLiteral.html">CCompiler::CharLiteral</a></li>
+        
+          <li><a href="../CCompiler/CharMultitiveExpression.html">CCompiler::CharMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/CharType.html">CCompiler::CharType</a></li>
+        
+          <li><a href="../CCompiler/CombinationOutput.html">CCompiler::CombinationOutput</a></li>
+        
+          <li><a href="../CCompiler/ComparativeExpression.html">CCompiler::ComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/Compiler.html">CCompiler::Compiler</a></li>
+        
+          <li><a href="../CCompiler/Conditional.html">CCompiler::Conditional</a></li>
+        
+          <li><a href="../CCompiler/DivisionOp.html">CCompiler::DivisionOp</a></li>
+        
+          <li><a href="../CCompiler/Else.html">CCompiler::Else</a></li>
+        
+          <li><a href="../CCompiler/End.html">CCompiler::End</a></li>
+        
+          <li><a href="../CCompiler/EqualOp.html">CCompiler::EqualOp</a></li>
+        
+          <li><a href="../CCompiler/Expression.html">CCompiler::Expression</a></li>
+        
+          <li><a href="../CCompiler/FalseLiteral.html">CCompiler::FalseLiteral</a></li>
+        
+          <li><a href="../CCompiler/FloatAdditiveExpression.html">CCompiler::FloatAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatAssignment.html">CCompiler::FloatAssignment</a></li>
+        
+          <li><a href="../CCompiler/FloatAssignmentSub.html">CCompiler::FloatAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/FloatComparativeExpression.html">CCompiler::FloatComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatExpression.html">CCompiler::FloatExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatLiteral.html">CCompiler::FloatLiteral</a></li>
+        
+          <li><a href="../CCompiler/FloatMultitiveExpression.html">CCompiler::FloatMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/FloatType.html">CCompiler::FloatType</a></li>
+        
+          <li><a href="../CCompiler/Global.html">CCompiler::Global</a></li>
+        
+          <li><a href="../CCompiler/GreaterEqOp.html">CCompiler::GreaterEqOp</a></li>
+        
+          <li><a href="../CCompiler/GreaterOp.html">CCompiler::GreaterOp</a></li>
+        
+          <li><a href="../CCompiler/Identifier.html">CCompiler::Identifier</a></li>
+        
+          <li><a href="../CCompiler/If.html">CCompiler::If</a></li>
+        
+          <li><a href="../CCompiler/Input.html">CCompiler::Input</a></li>
+        
+          <li><a href="../CCompiler/IntAdditiveExpression.html">CCompiler::IntAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/IntAssignment.html">CCompiler::IntAssignment</a></li>
+        
+          <li><a href="../CCompiler/IntAssignmentSub.html">CCompiler::IntAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/IntComparativeExpression.html">CCompiler::IntComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/IntExpression.html">CCompiler::IntExpression</a></li>
+        
+          <li><a href="../CCompiler/IntMultitiveExpression.html">CCompiler::IntMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/IntType.html">CCompiler::IntType</a></li>
+        
+          <li><a href="../CCompiler/IntegerLiteral.html">CCompiler::IntegerLiteral</a></li>
+        
+          <li><a href="../CCompiler/LessEqOp.html">CCompiler::LessEqOp</a></li>
+        
+          <li><a href="../CCompiler/LessOp.html">CCompiler::LessOp</a></li>
+        
+          <li><a href="../CCompiler/Loop.html">CCompiler::Loop</a></li>
+        
+          <li><a href="../CCompiler/Middle.html">CCompiler::Middle</a></li>
+        
+          <li><a href="../CCompiler/MultiplicationOp.html">CCompiler::MultiplicationOp</a></li>
+        
+          <li><a href="../CCompiler/MultitiveExpression.html">CCompiler::MultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/NilLiteral.html">CCompiler::NilLiteral</a></li>
+        
+          <li><a href="../CCompiler/NotEqualOp.html">CCompiler::NotEqualOp</a></li>
+        
+          <li><a href="../CCompiler/Output.html">CCompiler::Output</a></li>
+        
+          <li><a href="../CCompiler/ProcedureCall.html">CCompiler::ProcedureCall</a></li>
+        
+          <li><a href="../CCompiler/Statement.html">CCompiler::Statement</a></li>
+        
+          <li><a href="../CCompiler/StringAdditiveExpression.html">CCompiler::StringAdditiveExpression</a></li>
+        
+          <li><a href="../CCompiler/StringAssignment.html">CCompiler::StringAssignment</a></li>
+        
+          <li><a href="../CCompiler/StringAssignmentSub.html">CCompiler::StringAssignmentSub</a></li>
+        
+          <li><a href="../CCompiler/StringComparativeExpression.html">CCompiler::StringComparativeExpression</a></li>
+        
+          <li><a href="../CCompiler/StringExpression.html">CCompiler::StringExpression</a></li>
+        
+          <li><a href="../CCompiler/StringLiteral.html">CCompiler::StringLiteral</a></li>
+        
+          <li><a href="../CCompiler/StringMultitiveExpression.html">CCompiler::StringMultitiveExpression</a></li>
+        
+          <li><a href="../CCompiler/StringType.html">CCompiler::StringType</a></li>
+        
+          <li><a href="../CCompiler/Subroutine.html">CCompiler::Subroutine</a></li>
+        
+          <li><a href="../CCompiler/SubtractionOp.html">CCompiler::SubtractionOp</a></li>
+        
+          <li><a href="../CCompiler/SyntaxNode.html">CCompiler::SyntaxNode</a></li>
+        
+          <li><a href="../CCompiler/TrueLiteral.html">CCompiler::TrueLiteral</a></li>
+        
+          <li><a href="../CVM.html">CVM</a></li>
+        
+          <li><a href="../CVM/VM.html">CVM::VM</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../OperandError.html">OperandError</a></li>
+        
+          <li><a href="../Parser.html">Parser</a></li>
+        
+          <li><a href="../ReturnStackError.html">ReturnStackError</a></li>
+        
+          <li><a href="../StackError.html">StackError</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CVM::VM</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="VM.html">VM</a> is a class responsible for simulating the bytecode</p>
+<hr style="height: 1px">
+
+<p><a href="VM.html">VM</a> is a class responsible for simulating the
+bytecode. It has various helper functions to handle different kinds of
+nodes.</p>
+<hr style="height: 1px">
+
+<p><a href="VM.html">VM</a> is a class responsible for simulating the bytecode</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="files-attribute-method" class="method-detail">
+          <a name="files"></a>
+          
+          <a name="files="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">files</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="state-attribute-method" class="method-detail">
+          <a name="state"></a>
+          
+          <a name="state="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">state</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(state = {}, opcodes = [])</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Initialize values of attributes of a new instance of <a
+href="VM.html">VM</a></p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File vm/core.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">state</span> = {}, <span class="ruby-identifier">opcodes</span> = [])
+  <span class="ruby-identifier">default_state</span> = {
+    <span class="ruby-value">:opcodes</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opcodes</span>,
+    <span class="ruby-value">:globals</span> =<span class="ruby-operator">&gt;</span> {},
+    <span class="ruby-value">:fiber</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:data_stack</span> =<span class="ruby-operator">&gt;</span> [],
+      <span class="ruby-value">:return_stack</span> =<span class="ruby-operator">&gt;</span> [],
+      <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> [{}],
+      <span class="ruby-value">:instruction_pointer</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:level</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    }
+  }
+  <span class="ruby-ivar">@state</span> = <span class="ruby-identifier">default_state</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-ivar">@files</span> = {} 
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:fibers][x] must be a hash&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>))
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:fibers][x][:stack] must be an Array&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:data_stack</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>))
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:fibers][x][:stack] must be an Array&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:return_stack</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>))
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:fibers][x][:instruction_pointer] must be an Integer&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:instruction_pointer</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>))
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:fibers][x][:level] must be an Integer&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>))
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:globals] must be a hash&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:globals</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>))
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;state[:opcodes] must be an array&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:opcodes</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="data_stack-method" class="method-detail ">
+          <a name="method-i-data_stack"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">data_stack</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return data stack</p>
+            
+
+            
+            <div class="method-source-code" id="data_stack-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">data_stack</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:data_stack</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- data_stack-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- data_stack-method -->
+
+      
+        <div id="data_stack-3D-method" class="method-detail ">
+          <a name="method-i-data_stack-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">data_stack=</span><span
+              class="method-args">(stack)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set data stack</p>
+            
+
+            
+            <div class="method-source-code" id="data_stack-3D-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">data_stack=</span>(<span class="ruby-identifier">stack</span>)
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:data_stack</span>] = <span class="ruby-identifier">stack</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- data_stack-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- data_stack-3D-method -->
+
+      
+        <div id="decrement_scope-method" class="method-detail ">
+          <a name="method-i-decrement_scope"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">decrement_scope</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Decrease scope</p>
+            
+
+            
+            <div class="method-source-code" id="decrement_scope-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">decrement_scope</span>
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:locals</span>].<span class="ruby-identifier">delete_at</span>(<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>])
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>] <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- decrement_scope-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- decrement_scope-method -->
+
+      
+        <div id="globals-method" class="method-detail ">
+          <a name="method-i-globals"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">globals</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return global variables</p>
+            
+
+            
+            <div class="method-source-code" id="globals-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">globals</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:globals</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- globals-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- globals-method -->
+
+      
+        <div id="increment_scope-method" class="method-detail ">
+          <a name="method-i-increment_scope"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">increment_scope</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Increase scope</p>
+            
+
+            
+            <div class="method-source-code" id="increment_scope-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">increment_scope</span>
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:locals</span>][<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>]] = <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:locals</span>][<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>] <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">dup</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- increment_scope-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- increment_scope-method -->
+
+      
+        <div id="instruction_pointer-method" class="method-detail ">
+          <a name="method-i-instruction_pointer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">instruction_pointer</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return current instruction pointer</p>
+            
+
+            
+            <div class="method-source-code" id="instruction_pointer-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">instruction_pointer</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:instruction_pointer</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- instruction_pointer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- instruction_pointer-method -->
+
+      
+        <div id="instruction_pointer-3D-method" class="method-detail ">
+          <a name="method-i-instruction_pointer-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">instruction_pointer=</span><span
+              class="method-args">(ip)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set instruction pointer</p>
+            
+
+            
+            <div class="method-source-code" id="instruction_pointer-3D-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">instruction_pointer=</span>(<span class="ruby-identifier">ip</span>)
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:instruction_pointer</span>] = <span class="ruby-identifier">ip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- instruction_pointer-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- instruction_pointer-3D-method -->
+
+      
+        <div id="level-method" class="method-detail ">
+          <a name="method-i-level"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">level</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return level of fiber</p>
+            
+
+            
+            <div class="method-source-code" id="level-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">level</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- level-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- level-method -->
+
+      
+        <div id="level-3D-method" class="method-detail ">
+          <a name="method-i-level-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">level=</span><span
+              class="method-args">(level)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set level of fiber</p>
+            
+
+            
+            <div class="method-source-code" id="level-3D-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">level=</span>(<span class="ruby-identifier">level</span>)
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>] = <span class="ruby-identifier">level</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- level-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- level-3D-method -->
+
+      
+        <div id="locals-method" class="method-detail ">
+          <a name="method-i-locals"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locals</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return local variables</p>
+            
+
+            
+            <div class="method-source-code" id="locals-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locals</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:locals</span>][<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locals-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locals-method -->
+
+      
+        <div id="opcodes-method" class="method-detail ">
+          <a name="method-i-opcodes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">opcodes</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return opcodes</p>
+            
+
+            
+            <div class="method-source-code" id="opcodes-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">opcodes</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:opcodes</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- opcodes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- opcodes-method -->
+
+      
+        <div id="reload_scope-method" class="method-detail ">
+          <a name="method-i-reload_scope"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reload_scope</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Reset scope</p>
+            
+
+            
+            <div class="method-source-code" id="reload_scope-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reload_scope</span>
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:locals</span>][<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:level</span>]] = {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reload_scope-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reload_scope-method -->
+
+      
+        <div id="return_stack-method" class="method-detail ">
+          <a name="method-i-return_stack"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">return_stack</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return value of return stack</p>
+            
+
+            
+            <div class="method-source-code" id="return_stack-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">return_stack</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:return_stack</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- return_stack-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- return_stack-method -->
+
+      
+        <div id="return_stack-3D-method" class="method-detail ">
+          <a name="method-i-return_stack-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">return_stack=</span><span
+              class="method-args">(stack)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set return stack</p>
+            
+
+            
+            <div class="method-source-code" id="return_stack-3D-source">
+<pre>
+<span class="ruby-comment"># File vm/accessors.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">return_stack=</span>(<span class="ruby-identifier">stack</span>)
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:return_stack</span>] = <span class="ruby-identifier">stack</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- return_stack-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- return_stack-3D-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">(opcodes = [])</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Run the <a href="VM.html">VM</a> instance with input bytecode</p>
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File vm/core.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">opcodes</span> = [])
+  <span class="ruby-ivar">@state</span>[<span class="ruby-value">:opcodes</span>].<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">opcodes</span>)
+  <span class="ruby-identifier">opcode_size</span> = <span class="ruby-ivar">@state</span>[<span class="ruby-value">:opcodes</span>].<span class="ruby-identifier">size</span>
+  <span class="ruby-keyword">while</span> (<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:instruction_pointer</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">opcode_size</span>)
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span>(<span class="ruby-identifier">@@instruction</span>[<span class="ruby-ivar">@state</span>[<span class="ruby-value">:opcodes</span>][<span class="ruby-ivar">@state</span>[<span class="ruby-value">:fiber</span>][<span class="ruby-value">:instruction_pointer</span>]]].<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+      <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:opcodes</span>)
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\n&quot;</span> <span class="ruby-keyword">unless</span>(<span class="ruby-keyword">defined?</span>(<span class="ruby-identifier">$test</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$test</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)
+      <span class="ruby-identifier">raise</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
