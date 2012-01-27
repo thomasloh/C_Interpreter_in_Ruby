@@ -1,0 +1,35 @@
+C Compiler (using Ruby)
+@author Thomas Loh
+
+Folders & Files
+---------------
+
+doc - Documentation API for the project. Double click on doc/index.html to see.
+
+src - Contains all the source codes for this project
+
+tests - Contains all the tests cases. Available in webpage for ease of view. Double click on tests/index.html to see.
+
+* initial proposal, revised proposal and final report are included as well
+
+How To Run A Test Program
+-------------------------
+
+1. Navigate to src/processor.
+2. Write a [name].c file with the right syntax (Refer to final report) and save it when done.
+3. In terminal, type "ruby main.rb".
+4. A prompt will ask for an input file.
+5. To run different parts of the project, please refer to main.rb and comment out the appropriate code (Refer to comments in main.rb).
+
+* A more detailed explanation is in the final report.
+
+
+To run a demo, input "sample.c" (in src/processor) to the main program.
+Some of the functions demonstrated are:
+- Input number and comparative operations.
+- Print Hello World n times.
+- Find square of a number.
+- Print Fibonacci Sequence n times.
+
+
+*Heavily influenced by Koi Programming Language made by Aaron Gough
